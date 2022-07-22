@@ -9,6 +9,7 @@ TO DO :
 """
 ############################################################################################################################
 # Import Required Libraries and Module
+from curses import window
 import pandas as pds
 import numpy as np
 import os
@@ -131,11 +132,13 @@ def export_file():
 
 # Add Background Image
 bg_image = PhotoImage(file="bg.png")
+run_logo = PhotoImage(file="run_logo.png")
 
 canvas_1 = Canvas(win, width=1100, height=800)
 canvas_1.pack(fill= "both", expand= True)
 
 canvas_1.create_image(0, 0, image= bg_image, anchor="nw")
+canvas_1.create_image(0,40, anchor="nw", image=run_logo)
 
 ############################################################################################################################
 # Add Introduction
